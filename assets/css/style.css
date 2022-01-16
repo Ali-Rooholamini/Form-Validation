@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Fuzzy+Bubbles&family=Mochiy+Pop+P+One&family=Ubuntu:wght@300&display=swap');
+*{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-weight: bolder;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #8900f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formSec{
+    width: 500px;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 4px;
+}
+.formSec form{
+    width: 450px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.formSec form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    height: 70px;
+}
+.inputDiv{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin-bottom: 0px !important;
+}
+.inputDiv i{
+    position: absolute;
+    font-size: 23px;
+    right: 15px;
+    top: 9px;
+    display: none;
+}
+.inputDiv input{
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+}
+.inputDiv input:hover{
+    cursor: pointer;
+    border-color: rgb(170, 170, 170);
+}
+.formSec form > div .inputDiv + span{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(209, 21, 21);
+}
+.formSec form > div label{
+    font-size: 17px;
+}
+.formSec form h3{
+    margin-bottom: 35px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+.formSec form button{
+    background-color: #8900f2;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.formSec form button:active{
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color: #7801d3;
+}
+
+/* media query */
+@media screen and (max-width: 560px) {
+    .formSec{
+        width:300px;
+        padding: 20px;
+    }
+    .formSec form{
+        width: 300px;
+        padding: 2px;
+    }
+}

@@ -5,10 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Form-Validation</title>
 </head>
 <body>
     
+    <section class="formSec">
+        <form>
+            <h3>Create a New Account</h3>
+            <div>
+                <label for="name">Username</label>
+                <div class="inputDiv">
+                    <input type="text" id="name" maxlength="52">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <span></span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <div class="inputDiv">
+                    <input type="email" id="email" maxlength="52">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <span></span>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <div class="inputDiv">
+                    <input type="password" id="pass" maxlength="52">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <span></span>
+            </div>
+            <div>
+                <label for="rePass">Password Confirmation</label>
+                <div class="inputDiv">
+                    <input type="password" id="rePass" maxlength="52">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <span></span>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+    </section>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
