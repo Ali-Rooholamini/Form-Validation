@@ -29,7 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: 35px;
-    height: 70px;
+    position: relative;
 }
 .inputDiv{
     padding: 0;
@@ -44,8 +44,14 @@ body{
     position: absolute;
     font-size: 23px;
     right: 20px;
-    top: 8px;
+    top: 7px;
     display: none;
+}
+.inputDiv i.fa-check-circle{
+    color: rgb(47, 180, 13);
+}
+.inputDiv i.fa-exclamation-circle{
+    color: rgb(207, 9, 9);
 }
 .inputDiv input{
     padding: 4px;
@@ -65,7 +71,9 @@ body{
     border-color: rgb(170, 170, 170);
 }
 .formSec form > div .inputDiv + span{
-    display: inline-block;
+    position: absolute;
+    top: 70px;
+    left: 5px;
     font-size: 15px;
     font-weight: lighter;
     color: rgb(209, 21, 21);

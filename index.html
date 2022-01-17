@@ -11,12 +11,12 @@
 <body>
     
     <section class="formSec">
-        <form>
+        <form id="form">
             <h3>Create a New Account</h3>
             <div>
                 <label for="name">Username</label>
                 <div class="inputDiv">
-                    <input type="text" id="name">
+                    <input type="text" id="name" placeholder="Enter Your NickName" data-validation="nameValidation">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <span></span>
@@ -24,7 +24,7 @@
             <div>
                 <label for="email">Email</label>
                 <div class="inputDiv">
-                    <input type="email" id="email">
+                    <input type="email" id="email" placeholder="sample@email.com" data-validation="emailValidation">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <span></span>
@@ -32,7 +32,7 @@
             <div>
                 <label for="pass">Password</label>
                 <div class="inputDiv">
-                    <input type="password" id="pass">
+                    <input type="password" id="pass" data-validation="passValidation">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <span></span>
@@ -40,7 +40,7 @@
             <div>
                 <label for="rePass">Password Confirmation</label>
                 <div class="inputDiv">
-                    <input type="password" id="rePass">
+                    <input type="password" id="rePass" data-validation="rePassValidation">
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <span></span>
