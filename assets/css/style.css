@@ -36,21 +36,31 @@ body{
     margin: 0;
     position: relative;
     margin-bottom: 0px !important;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 4px;
+    overflow: hidden;
 }
 .inputDiv i{
     position: absolute;
     font-size: 23px;
-    right: 15px;
-    top: 9px;
+    right: 20px;
+    top: 8px;
     display: none;
 }
 .inputDiv input{
-    border: 2px solid rgb(212, 212, 212);
-    border-radius: 4px;
-    padding: 5px;
-    font-size: 15px;
+    padding: 4px;
+    font-size: 16px;
+    border: none;
+    width: 86%;
 }
 .inputDiv input:hover{
+    cursor: pointer;
+}
+.inputDiv input:focus{
+    border: none;
+    outline: none;
+}
+.inputDiv:hover{
     cursor: pointer;
     border-color: rgb(170, 170, 170);
 }
@@ -93,5 +103,8 @@ body{
     .formSec form{
         width: 300px;
         padding: 2px;
+    }
+    .inputDiv i{
+        right: 11px;
     }
 }
