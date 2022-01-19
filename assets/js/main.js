@@ -33,9 +33,6 @@ class formValidation{
         }else{
             span.textContent = "";
         }
-    }
-    nameValidation(elem){
-        let span = elem.parentElement.nextElementSibling;
         if(span.textContent.length === 0){
             elem.nextElementSibling.classList.replace("fa-exclamation-circle" , "fa-check-circle");
             elem.nextElementSibling.style.display = "inline-block";
@@ -45,10 +42,48 @@ class formValidation{
         }
     }
     emailValidation(elem){
-        
+        let span = elem.parentElement.nextElementSibling;
+        if(elem.value.length === 0){
+            return;
+        }
+        if(elem.value.indexOf("@gmail.com") > -1){
+            span.textContent = "";
+            elem.nextElementSibling.classList.replace("fa-exclamation-circle" , "fa-check-circle");
+            elem.nextElementSibling.style.display = "inline-block";
+        }else{
+            span.textContent = "Your Email is not Correct";
+            elem.nextElementSibling.classList.replace("fa-check-circle" , "fa-exclamation-circle");
+            elem.nextElementSibling.style.display = "inline-block";
+        }
     }
-    passValidation(elem){}
-    rePassValidation(elem){}
+    passValidation(elem){
+        if(elem.value.length === 0){
+            return;
+        }
+        elem.onblur = event => {
+            this.rePassValidation(rePass);
+        }
+    }
+    rePassValidation(elem){
+        if(elem.value.length === 0){
+            return;
+        }
+        let span = elem.parentElement.nextElementSibling;
+        if(pass.value.length == 0){
+            elem.nextElementSibling.classList.replace("fa-check-circle" , "fa-exclamation-circle");
+            elem.nextElementSibling.style.display = "inline-block";
+            return span.textContent = "you must enter Password first";
+        }
+        if(elem.value === pass.value){
+            span.textContent = "";
+            elem.nextElementSibling.classList.replace("fa-exclamation-circle" , "fa-check-circle");
+            elem.nextElementSibling.style.display = "inline-block";
+        }else{
+            span.textContent = "incorrect Password. Double Check your pass";
+            elem.nextElementSibling.classList.replace("fa-check-circle" , "fa-exclamation-circle");
+            elem.nextElementSibling.style.display = "inline-block";
+        }
+    }
 
 }
 new formValidation(form);
