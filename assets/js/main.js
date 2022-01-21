@@ -51,12 +51,12 @@ class formValidation{
             return;
         }
         let span = elem.parentElement.nextElementSibling;
-        if(elem.value.indexOf("@gmail.com") > -1 || elem.value.indexOf("@yahoo.com") > -1 || elem.value.indexOf("@outlook.com") > -1){
+        if(elem.value.match(/^[^ ]+@[^ ]+\.[abcdefghijklmnopqrstuvwxyz]{2,3}$/)){
             span.textContent = "";
             elem.nextElementSibling.classList.replace("fa-exclamation-circle" , "fa-check-circle");
             elem.nextElementSibling.style.display = "inline-block";
         }else{
-            span.textContent = "Your Email is not Correct";
+            span.textContent = "Your Email is not Valid";
             elem.nextElementSibling.classList.replace("fa-check-circle" , "fa-exclamation-circle");
             elem.nextElementSibling.style.display = "inline-block";
         }
