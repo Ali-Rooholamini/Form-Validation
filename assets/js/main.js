@@ -10,6 +10,9 @@ class formValidation{
     submitHandler(){
         this.__form.addEventListener("submit" , event => {
             event.preventDefault();
+            if(document.querySelectorAll(".fa-check-circle").length == 4){
+                this.__form.submit();
+            }
         });
     }
 
@@ -46,7 +49,7 @@ class formValidation{
         if(elem.value.length === 0){
             return;
         }
-        if(elem.value.indexOf("@gmail.com") > -1){
+        if(elem.value.indexOf("@gmail.com") > -1 || elem.value.indexOf("@yahoo.com") > -1 || elem.value.indexOf("@outlook.com") > -1){
             span.textContent = "";
             elem.nextElementSibling.classList.replace("fa-exclamation-circle" , "fa-check-circle");
             elem.nextElementSibling.style.display = "inline-block";

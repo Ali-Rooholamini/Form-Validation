@@ -70,13 +70,20 @@ body{
     cursor: pointer;
     border-color: rgb(170, 170, 170);
 }
-.formSec form > div .inputDiv + span{
+.formSec form > div span{
     position: absolute;
     top: 70px;
     left: 5px;
     font-size: 15px;
     font-weight: lighter;
     color: rgb(209, 21, 21);
+}
+.formSec form > div #passExclisive{
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    left: inherit;
+    color: inherit;
 }
 .formSec form > div label{
     font-size: 17px;
