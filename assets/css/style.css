@@ -78,13 +78,6 @@ body{
     font-weight: lighter;
     color: rgb(209, 21, 21);
 }
-.formSec form > div #passExclisive{
-    position: absolute;
-    top: 70px;
-    right: 5px;
-    left: inherit;
-    color: inherit;
-}
 .formSec form > div label{
     font-size: 17px;
 }
