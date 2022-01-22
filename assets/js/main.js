@@ -17,11 +17,16 @@ class formValidation{
     }
 
     focusHandler(){
+        this.__form.pass.addEventListener("focusin" , event => {
+            event.target.setAttribute("type" , "text");
+        });
         this.__form.addEventListener("focusout" , event => {
             if(event.target.tagName == "BUTTON"){
                 return;
             }
-            console.log(event.target);
+            if(event.target.hasAttribute("title")){
+                event.target.setAttribute("type" , "password");
+            }
             this.emptyValidation(event.target);
             if(event.target.dataset.validation){
                 this[event.target.dataset.validation](event.target);
